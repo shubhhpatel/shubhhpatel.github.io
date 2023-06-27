@@ -45,18 +45,6 @@ import image44 from "./images/concerts/44-min.png";
 import image45 from "./images/concerts/45-min.png";
 import image46 from "./images/concerts/46-min.png";
 import image47 from "./images/concerts/47-min.png";
-import image48 from "./images/concerts/48-min.png";
-import image49 from "./images/concerts/49-min.png";
-import image50 from "./images/concerts/50-min.png";
-import image51 from "./images/concerts/51-min.png";
-import image52 from "./images/concerts/52-min.png";
-import image53 from "./images/concerts/53-min.png";
-import image54 from "./images/concerts/54-min.png";
-import image55 from "./images/concerts/55-min.png";
-import image56 from "./images/concerts/56-min.png";
-import image57 from "./images/concerts/57-min.png";
-import image58 from "./images/concerts/58-min.png";
-import image59 from "./images/concerts/59-min.png";
 
 export default [
     image1,
@@ -106,16 +94,4 @@ export default [
     image45,
     image46,
     image47,
-    image48,
-    image49,
-    image50,
-    image51,
-    image52,
-    image53,
-    image54,
-    image55,
-    image56,
-    image57,
-    image58,
-    image59
 ];
