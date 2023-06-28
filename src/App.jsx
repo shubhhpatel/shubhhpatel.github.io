@@ -15,6 +15,9 @@ import Kursor from 'kursor';
 import 'kursor/dist/kursor.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import linkedin from './images/linkedin.png';
+import github from './images/github.png';
+import email from './images/envelope.png';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -52,7 +55,7 @@ function AlwaysOpenExample() {
       <Accordion.Item eventKey="0" active={accordion1Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
-            <Button variant="link" onClick={toggleAccordion1}>
+            <Button variant="link" className="button" onClick={toggleAccordion1}>
               How I get unreleased music on Spotify 🙀
             </Button>
             {accordion1Open && (
@@ -87,7 +90,7 @@ function AlwaysOpenExample() {
       <Accordion.Item eventKey="1" active={accordion2Open}>
         <Accordion.Body>
           <div>
-            <Button variant="link" onClick={toggleAccordion2}>
+            <Button className="button" variant="link" onClick={toggleAccordion2}>
               Western Student Hub 👾
             </Button>
             {accordion2Open && (
@@ -122,7 +125,7 @@ function AlwaysOpenExample() {
       <Accordion.Item eventKey="2" active={accordion3Open}>
         <Accordion.Body>
           <div>
-            <Button variant="link" onClick={toggleAccordion3}>
+            <Button className="button" variant="link" onClick={toggleAccordion3}>
               My personal website 🌎
             </Button>
             {accordion3Open && (
@@ -162,7 +165,7 @@ function AlwaysOpenExample() {
       <Accordion.Item eventKey="4" active={accordion5Open}>
         <Accordion.Body>
           <div>
-            <Button variant="link" onClick={toggleAccordion5}>
+            <Button className="button" variant="link" onClick={toggleAccordion5}>
               Western Software Engineering 👨‍💻
             </Button>
             {accordion5Open && (
@@ -191,7 +194,7 @@ function AlwaysOpenExample() {
       <Accordion.Item eventKey="3" active={accordion4Open}>
         <Accordion.Body>
           <div>
-            <Button variant="link" onClick={toggleAccordion4}>
+            <Button className="button" variant="link" onClick={toggleAccordion4}>
               Hoodies for Hope 👕
             </Button>
             {accordion4Open && (
@@ -299,11 +302,12 @@ function App() {
         </h2>
 
         <table>
-          <tr>
-            <td style={{ width: '0px', paddingRight: "20px" }}>
+          <tbody>
+            <tr>
+              <td rowSpan={2} style={{ width: '0px', paddingRight: "20px" }}>
 
-              <SyntaxHighlighter language="jsx" style={materialDark}>
-                {`let aboutMe = getShubhBiography();
+                <SyntaxHighlighter language="jsx" style={materialDark}>
+                  {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
   return {
@@ -330,27 +334,49 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-              </SyntaxHighlighter>
-            </td>
-            <td>
-              <div className="slideshow1">
-                <Carousel
-                  showThumbs={false}
-                  showStatus={false} // Hide the slideshow controls
-                  showIndicators={false} // Hide the dots indicating user position
-                  infiniteLoop
-                  autoPlay
-                >
-                  {faces.map((image, index) => (
-                    <div key={index}>
-                      <img src={image}
-                        style={{ minHeight: '30rem', minWidth: "fit-content" }} />
+                </SyntaxHighlighter>
+              </td>
+              <td>
+                <div className="slideshow1">
+                  <Carousel
+                    showThumbs={false}
+                    showStatus={false}
+                    showIndicators={false}
+                    infiniteLoop
+                    autoPlay
+                  >
+                    {faces.map((image, index) => (
+                      <div key={index}>
+                        <img src={image}
+                          style={{ minHeight: '30rem', minWidth: "fit-content" }} />
+                      </div>
+                    ))}
+                  </Carousel>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div className="socials-bar">
+                  <a href="https://github.com/shubhhpatel" target="_blank">
+                    <div className="social-icon github-icon">
+                      <img src={github} alt="GitHub" className="icon" />
                     </div>
-                  ))}
-                </Carousel>
-              </div>
-            </td>
-          </tr>
+                  </a>
+                  <a href="https://www.linkedin.com/in/-shubhpatel/" target="_blank">
+                    <div className="social-icon linkedin-icon">
+                      <img src={linkedin} alt="LinkedIn" className="icon" />
+                    </div>
+                  </a>
+                  <a href="mailto:spate768@uwo.com">
+                    <div className="social-icon email-icon">
+                      <img src={email} alt="Email" className="icon" />
+                    </div>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
 
         <br></br><br></br>
@@ -456,17 +482,6 @@ function getShubhBiography() {
           transition={{ duration: 1 }}
         >
           <h2>And yea... that's pretty much it, thanks for stopping by!</h2>
-          <h3>
-            You can check out what I'm working on{' '}
-            <a href="https://github.com/shubhhpatel" target="_blank" rel="noopener noreferrer">
-              here
-            </a>{' '}
-            and connect with me{' '}
-            <a href="https://www.linkedin.com/in/-shubhpatel/" target="_blank" rel="noopener noreferrer">
-              here
-            </a>
-            .
-          </h3>
           <div className="Video-container">
             <video id="video-demo" src={signature} preload="metadata" loop={false} muted autoPlay width="200" height="50" />
           </div>
