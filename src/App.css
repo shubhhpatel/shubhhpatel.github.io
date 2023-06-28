@@ -1,8 +1,12 @@
 .App-container {
-  width: 90%;
-  max-width: min-content;
+  width: 80%;
+
   margin: auto;
   padding: 30px;
+  align-items: center;
+  display: 'flex';
+  align-items: 'center';
+  justify-content: "center"
 }
 
 .bottom-heading {
@@ -118,4 +122,12 @@
 .carousel-image {
   max-height: 100%;
   max-width: 100%;
+}
+
+.carousel.carousel-slider .control-arrow {
+  display: none;
+}
+
+a {
+  color: '#a1e244'
 }

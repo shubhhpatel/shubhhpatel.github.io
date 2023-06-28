@@ -7,6 +7,7 @@ import { Accordion, Card, Button } from 'react-bootstrap';
 import videoDemo from './images/localify_demo.mp4';
 import { motion } from 'framer-motion';
 import images from './images';
+import faces from './faces';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import signature from './images/Shubh Patel.mp4';
@@ -75,7 +76,7 @@ function AlwaysOpenExample() {
                 </h3>
                 <br></br>
                 <p style={{ display: 'flex', justifyContent: 'center' }}>
-                  <video src={videoDemo} autoPlay loop style={{ width: '80%' }} />
+                  <video src={videoDemo} autoPlay loop style={{ width: '90%' }} />
                 </p>
               </div>
             )}
@@ -231,7 +232,7 @@ function App() {
     new Kursor({
       type: 4,
       removeDefaultCursor: true,
-      color: '#6cff5c'
+      color: '#a1e244'
     });
   }, []);
 
@@ -279,25 +280,30 @@ function App() {
   const staticString = "I like ";
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="App-container">
-      <h1 style={{ marginBottom: '5px' }}>What's up, I'm Shubh Patel</h1>
-      <h2 style={{ marginTop: '0', display: 'flex', alignItems: 'center' }}>
-        <span>{staticString}</span>
-        <span style={{ marginLeft: '5px' }}>
-          <Typewriter
-            options={{
-              strings: dynamicWords,
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 10,
-              delay: 50,
-            }}
-          />
-        </span>
-      </h2>
+    <div className="App-container">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} >
+        <h1 style={{ marginBottom: '5px', fontSize: "58px" }}>What's up, I'm Shubh Patel</h1>
+        <h2 style={{ marginTop: '0', display: 'flex', alignItems: 'center' }}>
+          <span>{staticString}</span>
+          <span style={{ marginLeft: '5px' }}>
+            <Typewriter
+              options={{
+                strings: dynamicWords,
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 10,
+                delay: 50,
+              }}
+            />
+          </span>
+        </h2>
 
-      <SyntaxHighlighter language="jsx" style={materialDark}>
-        {`let aboutMe = getShubhBiography();
+        <table>
+          <tr>
+            <td style={{ width: '0px', paddingRight: "20px" }}>
+
+              <SyntaxHighlighter language="jsx" style={materialDark}>
+                {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
   return {
@@ -324,128 +330,149 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-      </SyntaxHighlighter>
+              </SyntaxHighlighter>
+            </td>
+            <td>
+              <div className="slideshow1">
+                <Carousel
+                  showThumbs={false}
+                  showStatus={false} // Hide the slideshow controls
+                  showIndicators={false} // Hide the dots indicating user position
+                  infiniteLoop
+                  autoPlay
+                >
+                  {faces.map((image, index) => (
+                    <div key={index}>
+                      <img src={image}
+                        style={{ minHeight: '30rem', minWidth: "fit-content" }} />
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
+            </td>
+          </tr>
+        </table>
 
-      <br></br><br></br>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2>Stuff I've been working on</h2>
-        <AlwaysOpenExample />
-      </motion.div>
-
-
-      <br></br><br></br>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-
-
-        <h2>Now, for some fun stuff... I really like concert photography, so here are a few of my favourite shots.</h2>
-        <Carousel
-          showThumbs={false}
-          showStatus={false} // Hide the carousel status
-          showIndicators={false} // Hide the carousel indicators
-          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-            hasPrev && (
-              <button
-                type="button"
-                className="carousel-arrow carousel-arrow-prev"
-                onClick={onClickHandler}
-                title={label}
-              >
-                <span className="carousel-arrow-icon">&#8249;</span>
-              </button>
-            )
-          }
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-            hasNext && (
-              <button
-                type="button"
-                className="carousel-arrow carousel-arrow-next"
-                onClick={onClickHandler}
-                title={label}
-              >
-                <span className="carousel-arrow-icon">&#8250;</span>
-              </button>
-            )
-          }
-          renderThumbs={() => { }} // Hide the carousel thumbnails
-          renderIndicator={() => { }} // Hide the carousel indicators
-          showArrows // Show the carousel arrows
-          infiniteLoop // Enable infinite loop
-          swipeable // Enable swipe gestures
-          emulateTouch // Enable touch gestures
-          centerMode // Enable center mode
-          centerSlidePercentage={33.33} // Set the percentage width of the center slide
-          selectedItem={1} // Start at the second item (to show 3 images initially)
+        <br></br><br></br>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
-          {images.map((image, index) => (
-            <div key={index} className="carousel-image-wrapper">
-              <motion.div
-                className="carousel-image-container"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <img className="carousel-image" src={image} alt={`Concert ${index + 1}`} />
-              </motion.div>
-            </div>
-          ))}
-        </Carousel>
-      </motion.div>
+          <h2>Stuff I've been working on</h2>
+          <AlwaysOpenExample />
+        </motion.div>
 
-      <br></br><br></br>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2>Songs I can't get enough of recently</h2>
+        <br></br><br></br>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
 
-        <div style={{ display: 'flex', justifyContent: 'center', borderRadius: '12px' }}>
-          <iframe
-            style={{ borderRadius: '12px' }}
-            src="https://open.spotify.com/embed/playlist/2UiX47VboU8cd9A48ho6Il?utm_source=generator"
-            width="100%"
-            height="500"
-            frameBorder="0"
-            allowFullScreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </motion.div>
-      <br></br><br></br>
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2>And yea... that's pretty much it, thanks for stopping by!</h2>
-        <h3>
-          You can check out what I'm working on{' '}
-          <a href="https://github.com/shubhhpatel" target="_blank" rel="noopener noreferrer">
-            here
-          </a>{' '}
-          and connect with me{' '}
-          <a href="https://www.linkedin.com/in/-shubhpatel/" target="_blank" rel="noopener noreferrer">
-            here
-          </a>
-          .
-        </h3>
-        <div className="Video-container">
-          <video id="video-demo" src={signature} preload="metadata" loop={false} muted autoPlay width="200" height="50" />
-        </div>
-      </motion.div>
-    </motion.div>
+          <h2>Now, for some fun stuff... I really like concert photography, so here are a few of my favourite shots.</h2>
+          <Carousel
+            showThumbs={false}
+            showStatus={false} // Hide the carousel status
+            showIndicators={false} // Hide the carousel indicators
+            renderArrowPrev={(onClickHandler, hasPrev, label) =>
+              hasPrev && (
+                <button
+                  type="button"
+                  className="carousel-arrow carousel-arrow-prev"
+                  onClick={onClickHandler}
+                  title={label}
+                >
+                  <span className="carousel-arrow-icon">&#8249;</span>
+                </button>
+              )
+            }
+            renderArrowNext={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <button
+                  type="button"
+                  className="carousel-arrow carousel-arrow-next"
+                  onClick={onClickHandler}
+                  title={label}
+                >
+                  <span className="carousel-arrow-icon">&#8250;</span>
+                </button>
+              )
+            }
+            renderThumbs={() => { }} // Hide the carousel thumbnails
+            renderIndicator={() => { }} // Hide the carousel indicators
+            showArrows // Show the carousel arrows
+            infiniteLoop // Enable infinite loop
+            swipeable // Enable swipe gestures
+            emulateTouch // Enable touch gestures
+            centerMode // Enable center mode
+            centerSlidePercentage={33.33} // Set the percentage width of the center slide
+            selectedItem={1} // Start at the second item (to show 3 images initially)
+          >
+            {images.map((image, index) => (
+              <div key={index} className="carousel-image-wrapper">
+                <motion.div
+                  className="carousel-image-container"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <img className="carousel-image" src={image} alt={`Concert ${index + 1}`} />
+                </motion.div>
+              </div>
+            ))}
+          </Carousel>
+        </motion.div>
 
+        <br></br><br></br>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2>Songs I can't get enough of recently</h2>
+
+          <div style={{ display: 'flex', justifyContent: 'center', borderRadius: '12px' }}>
+            <iframe
+              style={{ borderRadius: '12px' }}
+              src="https://open.spotify.com/embed/playlist/2UiX47VboU8cd9A48ho6Il?utm_source=generator"
+              width="100%"
+              height="500"
+              frameBorder="0"
+              allowFullScreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </motion.div>
+        <br></br><br></br>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2>And yea... that's pretty much it, thanks for stopping by!</h2>
+          <h3>
+            You can check out what I'm working on{' '}
+            <a href="https://github.com/shubhhpatel" target="_blank" rel="noopener noreferrer">
+              here
+            </a>{' '}
+            and connect with me{' '}
+            <a href="https://www.linkedin.com/in/-shubhpatel/" target="_blank" rel="noopener noreferrer">
+              here
+            </a>
+            .
+          </h3>
+          <div className="Video-container">
+            <video id="video-demo" src={signature} preload="metadata" loop={false} muted autoPlay width="200" height="50" />
+          </div>
+        </motion.div>
+      </motion.div >
+    </div>
   );
 }
 
