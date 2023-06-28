@@ -1,12 +1,8 @@
 {
-<<<<<<< HEAD
   "homepage": "https://shubhhpatel.github.io/",
-=======
-  "homepage": "https://shubhhpatel.github.io/personalWebsite",
->>>>>>> 2d2385434965aba547ee8b8f57c8303ca4d733a3
   "name": "my-website",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
