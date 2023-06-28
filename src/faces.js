@@ -7,13 +7,5 @@ import image6 from "./images/faces/F6.png";
 import image7 from "./images/faces/F7.png";
 import image8 from "./images/faces/F8.png";
 
-export default [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-]
+export default [image1, image2, image3, image4, image5, image6, image7, image8];
+
