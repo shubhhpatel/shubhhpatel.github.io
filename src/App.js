@@ -4,20 +4,20 @@ import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Typewriter from 'typewriter-effect';
 import './App.css';
 import { Accordion, Card, Button } from 'react-bootstrap';
-import videoDemo from './images/localify_demo.mp4';
+import videoDemo from './assets/images/localify_demo.mp4';
 import { motion } from 'framer-motion';
 import images from './images';
 import faces from './faces';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import signature from './images/Shubh Patel.mp4';
+import signature from './assets/images/Shubh Patel.mp4';
 import Kursor from 'kursor';
 import 'kursor/dist/kursor.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import linkedin from './images/linkedin.png';
-import github from './images/github.png';
-import email from './images/envelope.png';
+import linkedin from './assets/images/linkedin.png';
+import github from './assets/images/github.png';
+import email from './assets/images/envelope.png';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
