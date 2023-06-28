@@ -2,7 +2,7 @@
   "homepage": "https://shubhhpatel.github.io",
   "name": "my-website",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
