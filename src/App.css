@@ -26,12 +26,13 @@
 .carousel .slide {
   position: relative;
   margin-right: 10px;
+  min-width: fit-content;
   /* Adjust the spacing between images */
 }
 
 .carousel .slide img.carousel-image {
   width: 100%;
-  height: 550px;
+  height: 650px;
   border-radius: 30px;
   /* Add rounded corners to the images */
   cursor: grab;
@@ -43,6 +44,7 @@
 
   /* Show grabbing cursor while dragging */
 }
+
 
 .carousel-arrow {
   background-color: rgba(0, 0, 0, 0.4);
@@ -162,6 +164,12 @@ a {
   /* Add a subtle shadow behind the original image */
 }
 
+::selection {
+  background-color: #a1e244;
+  color: black;
+}
+
+
 .social-icon:hover .icon {
   transform: scale(1.2);
   /* Increase the size on hover */
@@ -180,6 +188,11 @@ a {
   /* Change to the desired hover background color */
   transform: scale(1.1);
   /* Increase the button size on hover */
-  box-shadow: 0px 64px 512px rgba(0, 0, 0, 1);
+  box-shadow: 0px 128px 1024px rgba(0, 0, 0, 4);
   /* Add a shadow effect */
+}
+
+.carousel-image-wrapper {
+  height: 715px;
+  /* Update the height value to your desired height */
 }

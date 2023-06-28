@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && cp -r build/* dist/ && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -14,7 +14,11 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
+    "framer-motion": "^10.12.17",
+    "gsap": "^3.12.2",
+    "kursor": "^0.1.6",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-image-gallery": "^1.2.12",

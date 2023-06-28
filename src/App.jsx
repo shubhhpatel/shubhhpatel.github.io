@@ -304,7 +304,7 @@ function App() {
         <table>
           <tbody>
             <tr>
-              <td rowSpan={2} style={{ width: '0px', paddingRight: "20px" }}>
+              <td rowSpan={2} style={{ width: '550px', paddingRight: "20px" }}>
 
                 <SyntaxHighlighter language="jsx" style={materialDark}>
                   {`let aboutMe = getShubhBiography();
@@ -438,16 +438,16 @@ function getShubhBiography() {
             selectedItem={1} // Start at the second item (to show 3 images initially)
           >
             {images.map((image, index) => (
-              <div key={index} className="carousel-image-wrapper">
+              <motion.div key={index} className="carousel-image-wrapper" whileHover={{ scale: 1.075 }}>
                 <motion.div
                   className="carousel-image-container"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <img className="carousel-image" src={image} alt={`Concert ${index + 1}`} />
+                  <motion.img className="carousel-image" src={image} whileHover={{ boxShadow: '0 64px 512px rgba(0, 0, 0, 0.4)' }} />
                 </motion.div>
-              </div>
+              </motion.div>
             ))}
           </Carousel>
         </motion.div>
@@ -466,7 +466,7 @@ function getShubhBiography() {
               style={{ borderRadius: '12px' }}
               src="https://open.spotify.com/embed/playlist/2UiX47VboU8cd9A48ho6Il?utm_source=generator"
               width="100%"
-              height="500"
+              height="525"
               frameBorder="0"
               allowFullScreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -482,9 +482,7 @@ function getShubhBiography() {
           transition={{ duration: 1 }}
         >
           <h2>And yea... that's pretty much it, thanks for stopping by!</h2>
-          <div className="Video-container">
-            <video id="video-demo" src={signature} preload="metadata" loop={false} muted autoPlay width="200" height="50" />
-          </div>
+          <h3><i>P.S... I'm open to opportunities for the fall and winter so contact me and we can talk!</i></h3>
         </motion.div>
       </motion.div >
     </div>
