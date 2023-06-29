@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "axios": "^1.4.0",
     "framer-motion": "^10.12.17",
     "gsap": "^3.12.2",
