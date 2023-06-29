@@ -10,7 +10,6 @@ import images from './images';
 import faces from './faces';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import signature from './assets/images/Shubh Patel.mp4';
 import Kursor from 'kursor';
 import 'kursor/dist/kursor.css';
 import { gsap } from 'gsap';
