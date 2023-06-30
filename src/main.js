@@ -5,4 +5,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(
   null,
   React.createElement(App, null)
 ));
-
