@@ -1,4 +1,4 @@
-import App from './App.js';
+import App from './src/App.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(
   React.StrictMode,
