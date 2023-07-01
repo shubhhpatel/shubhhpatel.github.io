@@ -12,6 +12,7 @@ dist
 dist-ssr
 build
 package-lock.json
+.eslintrc.cjs
 *.local
 
 # Editor directories and files
