@@ -849,4 +849,3 @@ function getShubhBiography() {
 }
 
 export default App;
-
