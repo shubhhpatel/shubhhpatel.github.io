@@ -6,5 +6,4 @@ import image5 from "./assets/faces/F5.png";
 import image6 from "./assets/faces/F6.png";
 import image7 from "./assets/faces/F7.png";
 import image8 from "./assets/faces/F8.png";
-
 export default [image1, image2, image3, image4, image5, image6, image7, image8];
