@@ -435,7 +435,7 @@ function AlwaysOpenExample() {
                 React.createElement(
                   'td',
                   null,
-                  React.createElement('img', { src: 'src/assets/images/WSE.JPG', alt: 'Hoodies for Hope Demons', style: { width: '600px', marginLeft: "20px" } })
+                  React.createElement('img', { src: 'src/assets/images/WSE.JPG', alt: 'WSE Demons', style: { width: '600px', marginLeft: "20px" } })
                 )
               )
             )
