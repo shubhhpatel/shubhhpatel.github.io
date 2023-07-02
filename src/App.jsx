@@ -232,6 +232,13 @@ function AlwaysOpenExample() {
 
 
 function App() {
+
+  const [highlighterLoaded, setHighlighterLoaded] = useState(false);
+
+  useEffect(() => {
+    setHighlighterLoaded(true);
+  }, []);
+
   useEffect(() => {
     new Kursor({
       type: 4,
@@ -306,9 +313,10 @@ function App() {
           <tbody>
             <tr>
               <td rowSpan={2} style={{ width: '550px', paddingRight: "20px" }}>
-
-                <SyntaxHighlighter language="jsx" style={materialDark}>
-                  {`let aboutMe = getShubhBiography();
+                <div className="syntax">
+                  {highlighterLoaded && (
+                    <SyntaxHighlighter language="jsx" style={materialDark}>
+                      {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
   return {
@@ -335,7 +343,9 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-                </SyntaxHighlighter>
+                    </SyntaxHighlighter>
+                  )}
+                </div>
               </td>
               <td>
                 <div className="facesSlides" style={{ minWidth: '30rem' }}>
