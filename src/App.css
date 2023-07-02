@@ -1,7 +1,7 @@
 .App-container {
   width: 80%;
   margin: auto;
-  padding: 30px;
+  padding: 2rem;
   align-items: center;
   display: 'flex';
   align-items: 'center';
@@ -31,15 +31,15 @@
 
 .carousel .slide {
   position: relative;
-  margin-right: 10px;
+  margin-right: 1rem;
   min-width: fit-content;
   /* Adjust the spacing between images */
 }
 
 .carousel .slide img.carousel-image {
   width: 100%;
-  height: 650px;
-  border-radius: 30px;
+  height: 41rem;
+  border-radius: 2rem;
   /* Add rounded corners to the images */
   cursor: grab;
   /* Enable draggable behavior */
@@ -56,7 +56,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
   color: #fff;
-  padding: 10px;
+  padding: 0.8rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -71,16 +71,16 @@
 }
 
 .carousel-arrow.carousel-arrow-prev {
-  left: 10px;
+  left: 1rem;
 
 }
 
 .carousel-arrow.carousel-arrow-next {
-  right: 10px;
+  right: 1rem;
 }
 
 .carousel-arrow-icon {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .carousel .thumbs-wrapper {
@@ -99,7 +99,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0.7rem;
 }
 
 
@@ -108,7 +108,7 @@
   object-position: top;
   width: auto;
   height: 100%;
-  max-height: 400px;
+  max-height: 25rem;
   max-width: 100%;
 }
 
@@ -143,16 +143,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 2rem;
 }
 
 .social-icon {
   position: relative;
-  width: 35px;
+  width: 2.2rem;
   /* Adjust the width as per your desired size */
-  height: 35px;
+  height: 2.2rem;
   /* Adjust the height as per your desired size */
-  margin: 0 20px;
+  margin: 0 1.2rem;
   /* Adjust the horizontal spacing as desired */
 }
 
@@ -166,7 +166,7 @@ a {
   /* Add transitions for a smooth effect */
   filter: brightness(100%);
   /* Set the original image brightness to 100% */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
   /* Add a subtle shadow behind the original image */
 }
 
@@ -181,7 +181,7 @@ a {
   /* Increase the size on hover */
   filter: brightness(130%);
   /* Increase the brightness on hover */
-  box-shadow: 0 32px 256px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2rem 16rem rgba(0, 0, 0, 0.4);
   /* Add a more noticeable shadow on hover */
 }
 
@@ -194,11 +194,11 @@ a {
   /* Change to the desired hover background color */
   transform: scale(1.1);
   /* Increase the button size on hover */
-  box-shadow: 0px 128px 1024px rgba(0, 0, 0, 4);
+  box-shadow: 0px 8rem 64rem rgba(0, 0, 0, 4);
   /* Add a shadow effect */
 }
 
 .carousel-image-wrapper {
-  height: 715px;
+  height: 45rem;
   /* Update the height value to your desired height */
 }
