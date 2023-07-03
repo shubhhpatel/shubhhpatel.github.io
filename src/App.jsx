@@ -376,8 +376,8 @@ function getShubhBiography() {
           <div style={{ minWidth: "fit-content" }}>
             <Carousel
               showThumbs={false}
-              showStatus={false} // Hide the carousel status
-              showIndicators={false} // Hide the carousel indicators
+              showStatus={false}
+              showIndicators={false}
               renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (
                   <button
@@ -402,15 +402,15 @@ function getShubhBiography() {
                   </button>
                 )
               }
-              renderThumbs={() => { }} // Hide the carousel thumbnails
-              renderIndicator={() => { }} // Hide the carousel indicators
-              showArrows // Show the carousel arrows
-              infiniteLoop // Enable infinite loop
-              swipeable // Enable swipe gestures
-              emulateTouch // Enable touch gestures
-              centerMode // Enable center mode
-              centerSlidePercentage={33.33} // Set the percentage width of the center slide
-              selectedItem={1} // Start at the second item (to show 3 images initially)
+              renderThumbs={() => { }}
+              renderIndicator={() => { }}
+              showArrows
+              infiniteLoop
+              swipeable
+              emulateTouch
+              centerMode
+              centerSlidePercentage={33.33}
+              selectedItem={1}
             >
               {images.map((image, index) => (
                 <motion.div key={index} className="carousel-image-wrapper" whileHover={{ scale: 1.075 }}>

@@ -3,9 +3,8 @@
   margin: auto;
   padding: 2rem;
   align-items: center;
-  display: 'flex';
-  align-items: 'center';
-  justify-content: "center";
+  display: flex;
+  justify-content: center;
   max-width: fit-content;
 }
 
@@ -34,24 +33,21 @@
   position: relative;
   margin-right: 1rem;
   min-width: fit-content;
-  /* Adjust the spacing between images */
 }
 
 .carousel .slide img.carousel-image {
-  width: 100%;
-  height: 41rem;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 41rem;
   border-radius: 2rem;
-  /* Add rounded corners to the images */
   cursor: grab;
-  /* Enable draggable behavior */
 }
+
 
 .carousel .slide img.carousel-image:active {
   cursor: grabbing;
-
-  /* Show grabbing cursor while dragging */
 }
-
 
 .carousel-arrow {
   background-color: rgba(0, 0, 0, 0.4);
@@ -63,17 +59,14 @@
   transform: translateY(-50%);
   transition: background-color 0.3s ease;
   z-index: 2;
-
 }
 
 .carousel-arrow:hover {
   background-color: rgba(0, 0, 0, 0.7);
-
 }
 
 .carousel-arrow.carousel-arrow-prev {
   left: 1rem;
-
 }
 
 .carousel-arrow.carousel-arrow-next {
@@ -86,14 +79,10 @@
 
 .carousel .thumbs-wrapper {
   display: none;
-
-  /* Hide the carousel thumbnails */
 }
 
 .carousel .carousel-status {
   display: none;
-  /* Hide the carousel status */
-
 }
 
 .carousel .slide {
@@ -102,7 +91,6 @@
   align-items: center;
   padding: 0.7rem;
 }
-
 
 .image-resize {
   object-fit: contain;
@@ -115,11 +103,9 @@
 
 .carousel-image-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+  height: 45rem;
 }
-
 
 .carousel-image-container {
   display: flex;
@@ -137,7 +123,7 @@
 }
 
 a {
-  color: '#a1e244'
+  color: #a1e244;
 }
 
 .socials-bar {
@@ -150,11 +136,8 @@ a {
 .social-icon {
   position: relative;
   width: 2.2rem;
-  /* Adjust the width as per your desired size */
   height: 2.2rem;
-  /* Adjust the height as per your desired size */
   margin: 0 1.2rem;
-  /* Adjust the horizontal spacing as desired */
 }
 
 .icon {
@@ -164,11 +147,8 @@ a {
   width: 100%;
   height: 100%;
   transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
-  /* Add transitions for a smooth effect */
   filter: brightness(100%);
-  /* Set the original image brightness to 100% */
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  /* Add a subtle shadow behind the original image */
 }
 
 ::selection {
@@ -176,14 +156,10 @@ a {
   color: black;
 }
 
-
 .social-icon:hover .icon {
   transform: scale(1.2);
-  /* Increase the size on hover */
   filter: brightness(130%);
-  /* Increase the brightness on hover */
-  box-shadow: 0 2rem 16rem rgba(0, 0, 0, 0.4);
-  /* Add a more noticeable shadow on hover */
+  box-shadow: 0 0 4rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 .button {
@@ -191,15 +167,7 @@ a {
 }
 
 .button:hover {
-  background-color: #679526;
-  /* Change to the desired hover background color */
+  background-color: #7cb330;
   transform: scale(1.1);
-  /* Increase the button size on hover */
-  box-shadow: 0px 8rem 64rem rgba(0, 0, 0, 4);
-  /* Add a shadow effect */
-}
-
-.carousel-image-wrapper {
-  height: 45rem;
-  /* Update the height value to your desired height */
+  box-shadow: 0 0 2rem 0.5rem rgba(0, 0, 0, 4);
 }
