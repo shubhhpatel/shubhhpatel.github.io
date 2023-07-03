@@ -229,6 +229,11 @@ function AlwaysOpenExample() {
 
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   useEffect(() => {
     new Kursor({
@@ -259,6 +264,7 @@ function App() {
 
   return (
     <div className="App-container">
+
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} >
         <h1 style={{ marginBottom: '5px', fontSize: "58px" }}>What's up, I'm Shubh Patel</h1>
         <h2 style={{ marginTop: '0', display: 'flex', alignItems: 'center' }}>
@@ -280,8 +286,9 @@ function App() {
           <tbody>
             <tr>
               <td rowSpan={2} style={{ width: '550px', paddingRight: "20px" }}>
-                <SyntaxHighlighter language="jsx" style={materialDark}>
-                  {`let aboutMe = getShubhBiography();
+                {isLoaded && (
+                  <SyntaxHighlighter language="jsx" style={materialDark}>
+                    {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
   return {
@@ -308,7 +315,8 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-                </SyntaxHighlighter>
+                  </SyntaxHighlighter>
+                )}
               </td>
               <td>
                 <div className="facesSlides" style={{ minWidth: '30rem' }}>
