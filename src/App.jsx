@@ -21,9 +21,6 @@ import H4H from "./assets/images/H4H.jpeg";
 import WSE from "./assets/images/WSE.png";
 
 
-gsap.registerPlugin(ScrollTrigger);
-
-
 function AlwaysOpenExample() {
   const [accordion1Open, setAccordion1Open] = useState(false);
   const [accordion2Open, setAccordion2Open] = useState(false);
@@ -248,28 +245,6 @@ function App() {
   }, []);
 
   const [videoPlayed, setVideoPlayed] = useState(false);
-
-  useEffect(() => {
-    const sections = document.querySelectorAll('.section');
-
-    sections.forEach((section) => {
-      gsap.fromTo(
-        section,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            end: 'bottom 80%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-    });
-  }, []);
 
   const dynamicWords = [
     'film photography',
