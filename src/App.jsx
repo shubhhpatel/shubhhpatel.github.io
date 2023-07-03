@@ -230,12 +230,6 @@ function AlwaysOpenExample() {
 
 function App() {
 
-  const [highlighterLoaded, setHighlighterLoaded] = useState(false);
-
-  useEffect(() => {
-    setHighlighterLoaded(true);
-  }, []);
-
   useEffect(() => {
     new Kursor({
       type: 4,
@@ -243,8 +237,6 @@ function App() {
       color: '#a1e244'
     });
   }, []);
-
-  const [videoPlayed, setVideoPlayed] = useState(false);
 
   const dynamicWords = [
     'film photography',
@@ -288,10 +280,8 @@ function App() {
           <tbody>
             <tr>
               <td rowSpan={2} style={{ width: '550px', paddingRight: "20px" }}>
-                <div className="syntax">
-                  {highlighterLoaded && (
-                    <SyntaxHighlighter language="jsx" style={materialDark}>
-                      {`let aboutMe = getShubhBiography();
+                <SyntaxHighlighter language="jsx" style={materialDark}>
+                  {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
   return {
@@ -318,9 +308,7 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-                    </SyntaxHighlighter>
-                  )}
-                </div>
+                </SyntaxHighlighter>
               </td>
               <td>
                 <div className="facesSlides" style={{ minWidth: '30rem' }}>
