@@ -279,7 +279,7 @@ function App() {
           <tbody>
             <tr>
               <td rowSpan={2} style={{ width: '550px', maxWidth: '550px', paddingRight: "20px" }}>
-                <SyntaxHighlighter language="js" style={materialDark}>
+                <SyntaxHighlighter language="js" style={materialDark} className="code">
                   {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {

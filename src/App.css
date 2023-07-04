@@ -8,6 +8,10 @@
   max-width: fit-content;
 }
 
+.code {
+  font-family: 'Roboto Mono', monospace;
+}
+
 .bottom-heading {
   margin-top: 0;
 }
