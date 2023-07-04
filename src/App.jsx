@@ -287,7 +287,7 @@ function App() {
             <tr>
               <td rowSpan={2} style={{ width: '550px', maxWidth: '550px', paddingRight: "20px" }}>
                 {isLoaded && (
-                  <SyntaxHighlighter language="jsx" style={materialDark}>
+                  <pre><SyntaxHighlighter language="jsx" style={materialDark}>
                     {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
@@ -315,7 +315,7 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-                  </SyntaxHighlighter>
+                  </SyntaxHighlighter></pre>
                 )}
               </td>
               <td>
