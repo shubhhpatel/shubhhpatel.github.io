@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from '@fengkx/react-syntax-highlighter';
 import { materialDark } from '@fengkx/react-syntax-highlighter/dist/esm/styles/prism';
 import Typewriter from 'typewriter-effect';
@@ -280,7 +280,7 @@ function App() {
           <tbody>
             <tr>
               <td rowSpan={2} style={{ width: '550px', maxWidth: '550px', paddingRight: "20px" }}>
-                <SyntaxHighlighter language="js" style={materialDark} className="code">
+                <SyntaxHighlighter language="js" style={materialDark}>
                   {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
@@ -461,7 +461,7 @@ function getShubhBiography() {
           <h3><i>P.S... I'm open to opportunities for the fall and winter so contact me and we can talk!</i></h3>
         </motion.div>
       </motion.div >
-    </div>
+    </div >
   );
 }
 

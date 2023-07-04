@@ -28,13 +28,14 @@
     "react-icons": "^4.8.0",
     "react-image-gallery": "^1.2.12",
     "react-modal": "^3.16.1",
+    "react-particles": "^2.10.1",
     "react-responsive-carousel": "^3.2.23",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "react-spotify-api": "^3.0.0",
     "react-spotify-web-playback": "^0.14.0",
     "react-syntax-highlighter": "^15.5.0",
-    "react-tsparticles": "^2.9.3",
+    "react-tsparticles": "^2.10.1",
     "slick": "^1.12.2",
     "slick-carousel": "^1.8.1",
     "spotify-web-api-js": "^1.5.2",
@@ -42,7 +43,8 @@
     "swiper-bundle": "^0.0.1-security",
     "tsparticles": "^2.9.3",
     "typeface-inter": "^3.18.1",
-    "typeface-roboto-mono": "^1.1.13"
+    "typeface-roboto-mono": "^1.1.13",
+    "web-vitals": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
