@@ -17,7 +17,8 @@ import github from './assets/images/github.png';
 import email from './assets/images/envelope.png';
 import H4H from "./assets/images/H4H.jpeg";
 import WSE from "./assets/images/WSE.png";
-
+import '@fontsource/cascadia-code';
+import 'typeface-inter';
 
 
 function AlwaysOpenExample() {
