@@ -21,6 +21,7 @@ import H4H from "./assets/images/H4H.jpeg";
 import WSE from "./assets/images/WSE.png";
 
 
+
 function AlwaysOpenExample() {
   const [accordion1Open, setAccordion1Open] = useState(false);
   const [accordion2Open, setAccordion2Open] = useState(false);
