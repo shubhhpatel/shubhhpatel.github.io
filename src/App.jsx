@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from '@fengkx/react-syntax-highlighter';
+import { materialDark } from '@fengkx/react-syntax-highlighter/dist/esm/styles/prism';
 import Typewriter from 'typewriter-effect';
 import './App.css';
 import { Accordion, Card, Button } from 'react-bootstrap';
@@ -12,8 +12,6 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Kursor from 'kursor';
 import 'kursor/dist/kursor.css';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import linkedin from './assets/images/linkedin.png';
 import github from './assets/images/github.png';
 import email from './assets/images/envelope.png';
@@ -230,11 +228,6 @@ function AlwaysOpenExample() {
 
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   useEffect(() => {
     new Kursor({
@@ -286,9 +279,8 @@ function App() {
           <tbody>
             <tr>
               <td rowSpan={2} style={{ width: '550px', maxWidth: '550px', paddingRight: "20px" }}>
-                {isLoaded && (
-                  <code><SyntaxHighlighter language="jsx" style={materialDark}>
-                    {`let aboutMe = getShubhBiography();
+                <SyntaxHighlighter language="js" style={materialDark}>
+                  {`let aboutMe = getShubhBiography();
 
 function getShubhBiography() {
   return {
@@ -315,8 +307,7 @@ function getShubhBiography() {
     doYouGetTheReference: true
   };
 }`}
-                  </SyntaxHighlighter></code>
-                )}
+                </SyntaxHighlighter>
               </td>
               <td>
                 <div className="facesSlides" style={{ minWidth: '30rem' }}>
