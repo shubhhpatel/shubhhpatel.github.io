@@ -279,7 +279,7 @@ function App() {
         <table>
           <tbody>
             <tr>
-              <td rowSpan={2} style={{ width: '600px', maxWidth: '650px', paddingRight: "20px" }}>
+              <td rowSpan={2} style={{ width: '650px', maxWidth: '650px', paddingRight: "20px" }}>
                 <SyntaxHighlighter language="js" style={materialDark}>
                   {`let aboutMe = getShubhBiography();
 
@@ -311,7 +311,7 @@ function getShubhBiography() {
                 </SyntaxHighlighter>
               </td>
               <td>
-                <div className="facesSlides" style={{ minWidth: '30rem', paddingLeft: '30px' }}>
+                <div className="facesSlides" style={{ minWidth: '33rem' }}>
                   <Carousel
                     showThumbs={false}
                     showStatus={false}
@@ -322,7 +322,7 @@ function getShubhBiography() {
                     {faces.map((image, index) => (
                       <div key={index}>
                         <img src={image}
-                          style={{ minHeight: '30rem', minWidth: "fit-content" }} />
+                          style={{ minHeight: '33rem', minWidth: "fit-content" }} />
                       </div>
                     ))}
                   </Carousel>
