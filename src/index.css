@@ -2,11 +2,9 @@
   font-family: Inter;
   line-height: 1.5;
   font-weight: 400;
-  min-width: fit-content;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1f1f1f;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,10 +28,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #1f1f1f;
+  min-width: fit-content;
+  font-family: Inter, Roboto;
+}
+
+.content {
+  background-color: #1f1f1f;
+  min-width: fit-content;
+  font-family: Inter;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: Inter;
+  background-color: #1f1f1f;
 }
 
 h1 {
