@@ -279,7 +279,7 @@ function App() {
         <table>
           <tbody>
             <tr>
-              <td rowSpan={2} style={{ width: '550px', maxWidth: '550px', paddingRight: "20px" }}>
+              <td rowSpan={2} style={{ width: '600px', maxWidth: '650px', paddingRight: "20px" }}>
                 <SyntaxHighlighter language="js" style={materialDark}>
                   {`let aboutMe = getShubhBiography();
 
@@ -311,7 +311,7 @@ function getShubhBiography() {
                 </SyntaxHighlighter>
               </td>
               <td>
-                <div className="facesSlides" style={{ minWidth: '30rem' }}>
+                <div className="facesSlides" style={{ minWidth: '30rem', paddingLeft: '30px' }}>
                   <Carousel
                     showThumbs={false}
                     showStatus={false}
