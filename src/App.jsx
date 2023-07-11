@@ -151,7 +151,7 @@ function AlwaysOpenExample() {
                   </tr>
                 </table>
                 <h3>
-                  Check it out <a href="https://github.com/shubhhpatel/personalWebsite" target="_blank" rel="noopener noreferrer">here</a>.
+                  Check it out <a href="https://github.com/shubhhpatel/" target="_blank" rel="noopener noreferrer">here</a>.
                 </h3>
               </div>
             )}
