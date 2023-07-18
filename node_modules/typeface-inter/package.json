@@ -1,0 +1,14 @@
+{
+  "name": "typeface-inter",
+  "version": "3.18.1",
+  "description": "npm package for the Inter font family.",
+  "main": "inter.css",
+  "keywords": [
+    "Inter",
+    "typeface",
+    "font"
+  ],
+  "author": "Ajmal Afif Jamal (https://ajmalafif.com)",
+  "license": "OFL-1.1",
+  "repository": "git@github.com:ajmalafif/typeface-inter.git"
+}
