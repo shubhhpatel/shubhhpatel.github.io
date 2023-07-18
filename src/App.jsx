@@ -4,7 +4,6 @@ import { materialDark } from '@fengkx/react-syntax-highlighter/dist/esm/styles/p
 import Typewriter from 'typewriter-effect';
 import './App.css';
 import { Accordion, Card, Button } from 'react-bootstrap';
-import videoDemo from './assets/images/localify_demo.mp4';
 import { motion } from 'framer-motion';
 import images from './images';
 import faces from './faces';
@@ -76,9 +75,15 @@ function AlwaysOpenExample() {
                   Check it out <a href="https://github.com/shubhhpatel/localify" target="_blank" rel="noopener noreferrer">here</a>.
                 </h3>
                 <br></br>
-                <p style={{ display: 'flex', justifyContent: 'center' }}>
-                  <video src={videoDemo} autoPlay loop style={{ width: '90%' }} />
-                </p>
+                <div className="video-container" >
+                  <iframe
+                    title="Localify Demo"
+                    src="https://www.youtube.com/embed/DuKobN0D4ME"
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             )}
           </div>
