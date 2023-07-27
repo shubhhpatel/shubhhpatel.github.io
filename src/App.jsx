@@ -26,6 +26,7 @@ function AlwaysOpenExample() {
   const [accordion3Open, setAccordion3Open] = useState(false);
   const [accordion4Open, setAccordion4Open] = useState(false);
   const [accordion5Open, setAccordion5Open] = useState(false);
+  const [accordion6Open, setAccordion6Open] = useState(false);
 
   const toggleAccordion1 = () => {
     setAccordion1Open(!accordion1Open);
@@ -47,15 +48,46 @@ function AlwaysOpenExample() {
     setAccordion5Open(!accordion5Open);
   };
 
+  const toggleAccordion6 = () => {
+    setAccordion6Open(!accordion6Open);
+  };
+
   return (
     <Accordion className="custom-accordion">
       <Accordion.Item eventKey="0" active={accordion1Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
             <Button variant="link" className="button" onClick={toggleAccordion1}>
-              How I get unreleased music on Spotify 🙀
+              Designing robots with Kevares 🦾
             </Button>
             {accordion1Open && (
+              <div>
+                <table>
+                  <tr>
+                    <td style={{ width: '32%' }}>
+                      <p>In the summer after first-year, I worked with a cool startup called <span style={{ fontWeight: 'bold', color: 'orange' }}>Kevares Autonomous Services</span>. They make robots that autonomize municipal processes like <span style={{ fontWeight: 'bold', color: 'orange' }}>side-walk inspections, snow removal, and grass-cutting</span>. I worked with the Embedded Systems team to redesign the second version of their flagship side-walk inspection robot. </p>
+                    </td>
+                    <td style={{ width: '4%' }}></td>
+                    <td>
+                      <h3>Stuff I learned</h3>
+                      <p>1. Learning engineering concepts while considering the cross-functional team’s priorities with the robot such as sales and design with the chassis was a difficult but rewarding task.<br></br>2. We were able to increase the width of view of the robot so that it wouldn’t have to do multiple rounds to capture one wide sidewalk while decreasing its footprint, which sounds a lot easier than it is!
+                        <br></br>3. CAD, Managing a product and communicating with the many teams involved.</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            )}
+          </div>
+          <br></br>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1" active={accordion1Open ? 'true' : 'false'}>
+        <Accordion.Body>
+          <div>
+            <Button variant="link" className="button" onClick={toggleAccordion2}>
+              How I get unreleased music on Spotify 🙀
+            </Button>
+            {accordion2Open && (
               <div>
                 <table>
                   <tr>
@@ -90,13 +122,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1" active={accordion2Open}>
+      <Accordion.Item eventKey="2" active={accordion3Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion2}>
+            <Button className="button" variant="link" onClick={toggleAccordion3}>
               Western Student Hub 👾
             </Button>
-            {accordion2Open && (
+            {accordion3Open && (
               <div>
                 <table>
                   <tr>
@@ -125,13 +157,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2" active={accordion3Open}>
+      <Accordion.Item eventKey="3" active={accordion4Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion3}>
+            <Button className="button" variant="link" onClick={toggleAccordion4}>
               My personal website 🌎
             </Button>
-            {accordion3Open && (
+            {accordion4Open && (
               <div>
                 <table>
                   <tr>
@@ -194,13 +226,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="3" active={accordion4Open}>
+      <Accordion.Item eventKey="5" active={accordion6Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion4}>
+            <Button className="button" variant="link" onClick={toggleAccordion6}>
               Hoodies for Hope 👕
             </Button>
-            {accordion4Open && (
+            {accordion6Open && (
               <div>
                 <table>
                   <tr>
@@ -247,17 +279,19 @@ function App() {
     'film photography',
     'concerts',
     'chatGPT',
+    'vintage cameras',
     'underground hip-hop',
     'procrastinating',
     'toronto r&b',
     'concert photography',
     'bedroom pop',
     'sitcoms',
-    'spotify',
+    'chrome hearts',
     'startups',
     'greek mythology',
-    'product management',
+    'building products',
     'the raptors',
+    'nostalgia',
   ];
 
   const staticString = "I like ";
@@ -286,19 +320,23 @@ function App() {
             <tr>
               <td rowSpan={2} style={{ width: '650px', maxWidth: '650px', paddingRight: "20px" }}>
                 <SyntaxHighlighter language="js" style={materialDark}>
-                  {`let aboutMe = getShubhBiography();
-
-function getShubhBiography() {
+                  {`function getShubhBiography() {
   return {
-    location: "Toronto",
     university: "Western University",
     program: [
       "Computer Science", 
       "Business"
     ],
     year: 2,
+    experience: {
+      Kevares: ["Embedded Systems Intern"],
+      Western_Software_Engineering: ["Full-Stack Developer"],
+      Hoodies_For_Hope: ["Co-Founder"]
+    },
     careerInterests: [
       "Product Management",
+      "Software Engineering",
+      "UI/UX Design",
       null // uh, I'm still figuring it out
     ],
     otherInterests: [
@@ -306,13 +344,12 @@ function getShubhBiography() {
       "Machine Learning",
       "Blockchain",
       "Artificial Intelligence",
-      "Digital Manufacturing",
-      "Quantum Communication",
-      "Internet of Things"
+      "Quantum Communication"
     ],
     doYouGetTheReference: true
   };
-}`}
+}
+`}
                 </SyntaxHighlighter>
               </td>
               <td>
