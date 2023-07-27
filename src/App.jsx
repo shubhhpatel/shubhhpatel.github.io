@@ -323,15 +323,12 @@ function App() {
                   {`function getShubhBiography() {
   return {
     university: "Western University",
-    program: [
-      "Computer Science", 
-      "Business"
-    ],
+    program: "Computer Science",
     year: 2,
     experience: {
-      Kevares: ["Embedded Systems Intern"],
-      Western_Software_Engineering: ["Full-Stack Developer"],
-      Hoodies_For_Hope: ["Co-Founder"]
+      Kevares: "Embedded Systems Intern",
+      Western_Software_Engineering: "Full-Stack Developer",
+      Hoodies_For_Hope: "Co-Founder"
     },
     careerInterests: [
       "Product Management",
