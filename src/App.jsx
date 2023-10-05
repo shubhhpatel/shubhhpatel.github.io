@@ -27,6 +27,7 @@ function AlwaysOpenExample() {
   const [accordion4Open, setAccordion4Open] = useState(false);
   const [accordion5Open, setAccordion5Open] = useState(false);
   const [accordion6Open, setAccordion6Open] = useState(false);
+  const [accordion7Open, setAccordion7Open] = useState(false);
 
   const toggleAccordion1 = () => {
     setAccordion1Open(!accordion1Open);
@@ -52,15 +53,45 @@ function AlwaysOpenExample() {
     setAccordion6Open(!accordion6Open);
   };
 
+  const toggleAccordion7 = () => {
+    setAccordion7Open(!accordion7Open);
+  };
+
   return (
     <Accordion className="custom-accordion">
       <Accordion.Item eventKey="0" active={accordion1Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
             <Button variant="link" className="button" onClick={toggleAccordion1}>
-              Designing robots with Kevares 🦾
+              Finding storage units with Comparastore 🏠
             </Button>
             {accordion1Open && (
+              <div>
+                <table>
+                  <tr>
+                    <td style={{ width: '32%' }}>
+                      <p>I'm currently working with a <span style={{ fontWeight: 'bold', color: '#ffe200' }}>Montréal based start-up that compiles storage unit rental listings from various websites and presents them on one platform.</span> I'm part of the <span style={{ fontWeight: 'bold', color: '#ffe200' }}>Data Science team</span> where I help improve the website's ability of finding specific information such as rental unit pricing, sizing and promotions.</p>
+                    </td>
+                    <td style={{ width: '4%' }}></td>
+                    <td>
+                      <h3>Stuff I learned</h3>
+                      <p>1. It takes A LOT of consistent training data to train a ML Model accurately.<br></br>2. Building any type of accurate internet aggregator that we use as commonly as Indeed.com, for example, is extremely complex.</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            )}
+          </div>
+          <br></br>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1" active={accordion2Open ? 'true' : 'false'}>
+        <Accordion.Body>
+          <div>
+            <Button variant="link" className="button" onClick={toggleAccordion2}>
+              Designing robots with Kevares 🦾
+            </Button>
+            {accordion2Open && (
               <div>
                 <table>
                   <tr>
@@ -81,13 +112,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1" active={accordion1Open ? 'true' : 'false'}>
+      <Accordion.Item eventKey="2" active={accordion3Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
-            <Button variant="link" className="button" onClick={toggleAccordion2}>
+            <Button variant="link" className="button" onClick={toggleAccordion3}>
               How I get unreleased music on Spotify 🙀
             </Button>
-            {accordion2Open && (
+            {accordion3Open && (
               <div>
                 <table>
                   <tr>
@@ -122,13 +153,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2" active={accordion3Open}>
+      <Accordion.Item eventKey="3" active={accordion4Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion3}>
+            <Button className="button" variant="link" onClick={toggleAccordion4}>
               Western Student Hub 👾
             </Button>
-            {accordion3Open && (
+            {accordion4Open && (
               <div>
                 <table>
                   <tr>
@@ -157,13 +188,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="3" active={accordion4Open}>
+      <Accordion.Item eventKey="4" active={accordion5Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion4}>
+            <Button className="button" variant="link" onClick={toggleAccordion5}>
               My personal website 🌎
             </Button>
-            {accordion4Open && (
+            {accordion5Open && (
               <div>
                 <table>
                   <tr>
@@ -197,13 +228,13 @@ function AlwaysOpenExample() {
         </Accordion.Body>
       </Accordion.Item>
       <h2>Stuff I've done in the past</h2>
-      <Accordion.Item eventKey="4" active={accordion5Open}>
+      <Accordion.Item eventKey="5" active={accordion6Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion5}>
+            <Button className="button" variant="link" onClick={toggleAccordion6}>
               Western Software Engineering 👨‍💻
             </Button>
-            {accordion5Open && (
+            {accordion6Open && (
               <div>
                 <table>
                   <tr>
@@ -226,13 +257,13 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="5" active={accordion6Open}>
+      <Accordion.Item eventKey="6" active={accordion7Open}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion6}>
+            <Button className="button" variant="link" onClick={toggleAccordion7}>
               Hoodies for Hope 👕
             </Button>
-            {accordion6Open && (
+            {accordion7Open && (
               <div>
                 <table>
                   <tr>
@@ -248,7 +279,7 @@ function AlwaysOpenExample() {
 
                     </td>
                     <td>
-                      <img src={H4H} alt="Hoodies for Hope Demons" style={{ width: '600px', marginLeft: "20px" }} />
+                      <img src={H4H} alt="Hoodies for Hope" style={{ width: '600px', marginLeft: "20px" }} />
                     </td>
 
                   </tr>
@@ -278,6 +309,7 @@ function App() {
   const dynamicWords = [
     'film photography',
     'concerts',
+    'stoic philosophy',
     'chatGPT',
     'vintage cameras',
     'underground hip-hop',
@@ -285,10 +317,12 @@ function App() {
     'toronto r&b',
     'concert photography',
     'bedroom pop',
+    'thrifting',
     'sitcoms',
     'chrome hearts',
     'startups',
     'greek mythology',
+    'concerts',
     'building products',
     'the raptors',
     'nostalgia',
@@ -326,14 +360,15 @@ function App() {
     program: "Computer Science",
     year: 2,
     experience: {
+      Comparastore: "Data Analyst Intern"
+      Western_AI: "Project Manager"
       Kevares: "Embedded Systems Intern",
       Western_Software_Engineering: "Full-Stack Developer",
       Hoodies_For_Hope: "Co-Founder"
     },
     careerInterests: [
       "Product Management",
-      "Software Engineering",
-      "UI/UX Design",
+      "Software Development",
       null // uh, I'm still figuring it out
     ],
     otherInterests: [
@@ -497,7 +532,7 @@ function App() {
           transition={{ duration: 1 }}
         >
           <h2>And yea... that's pretty much it, thanks for stopping by!</h2>
-          <h3><i>P.S... I'm open to opportunities for the fall and winter so contact me and we can talk!</i></h3>
+          <h4><i>P.S... I'm open to opportunities for Summer 2024 so contact me and we can talk!</i></h4>
         </motion.div>
       </motion.div >
     </div >

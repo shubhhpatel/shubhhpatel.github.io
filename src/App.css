@@ -46,6 +46,31 @@ body {
   max-height: 100%;
 }
 
+.facesSlides .carousel-root {
+  width: 100%;
+}
+
+.facesSlides .carousel .slider-wrapper {
+  width: 100%;
+}
+
+.facesSlides .carousel .slider {
+  width: 100%;
+}
+
+.facesSlides .carousel .slider .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.facesSlides .carousel .slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .video {
   width: 90%;
   height: 100%;
