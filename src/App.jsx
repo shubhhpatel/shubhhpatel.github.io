@@ -310,22 +310,23 @@ function App() {
     'film photography',
     'concerts',
     'stoic philosophy',
-    'chatGPT',
-    'vintage cameras',
+    'film cameras',
     'underground hip-hop',
+    'seinfeld',
     'procrastinating',
     'toronto r&b',
+    'breaking bad',
     'concert photography',
     'bedroom pop',
     'thrifting',
     'sitcoms',
-    'chrome hearts',
     'startups',
     'greek mythology',
     'concerts',
     'building products',
     'the raptors',
     'nostalgia',
+    'the office'
   ];
 
   const staticString = "I like ";
@@ -360,16 +361,16 @@ function App() {
     program: "Computer Science",
     year: 2,
     experience: {
-      Comparastore: "Data Analyst Intern"
-      Western_AI: "Project Manager"
+      ImmiCan_AI: "Product Management Intern",
+      Arima: "Data Analyst Intern"
+      Comparastore: "Data Analyst Intern",
       Kevares: "Embedded Systems Intern",
+      Western_AI: "Project Manager",
       Western_Software_Engineering: "Full-Stack Developer",
-      Hoodies_For_Hope: "Co-Founder"
     },
     careerInterests: [
       "Product Management",
-      "Software Development",
-      null // uh, I'm still figuring it out
+      null // uh, i'm still figuring it out
     ],
     otherInterests: [
       "Big Data",
