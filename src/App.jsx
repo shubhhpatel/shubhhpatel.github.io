@@ -380,6 +380,7 @@ function App() {
       "Quantum Communication"
     ],
     doYouGetTheReference: true
+    lastUpdated: "January 20, 2024"
   };
 }
 `}
