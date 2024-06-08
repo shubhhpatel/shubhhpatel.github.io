@@ -59,23 +59,22 @@ function AlwaysOpenExample() {
 
   return (
     <Accordion className="custom-accordion">
-      <Accordion.Item eventKey="0" active={accordion1Open ? 'true' : 'false'}>
+      <Accordion.Item eventKey="1" active={accordion1Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
             <Button variant="link" className="button" onClick={toggleAccordion1}>
-              Finding storage units with Comparastore 🏠
+              Making sure people get paid with Trolley 🛒
             </Button>
             {accordion1Open && (
               <div>
                 <table>
                   <tr>
-                    <td style={{ width: '32%' }}>
-                      <p>I'm currently working with a <span style={{ fontWeight: 'bold', color: '#ffe200' }}>Montréal based start-up that compiles storage unit rental listings from various websites and presents them on one platform.</span> I'm part of the <span style={{ fontWeight: 'bold', color: '#ffe200' }}>Data Science team</span> where I help improve the website's ability of finding specific information such as rental unit pricing, sizing and promotions.</p>
+                    <td style={{ width: '35%' }}>
+                      <p>Working in <span style={{ fontWeight: 'bold', color: '#0092ff' }}>Product</span> at <span style={{ fontWeight: 'bold', color: '#0092ff' }}>Trolley</span>, a cloud-based payouts platform that enables businesses to send payments <span style={{ fontWeight: 'bold', color: '#0092ff' }}>across the globe</span>, to individuals or companies, in any currency, and to all primary payment methods. Check it out at <a href="https://www.trolley.com" target="_blank" rel="noopener noreferrer">www.trolley.com</a>. Series A, 10m raised.</p>
                     </td>
                     <td style={{ width: '4%' }}></td>
                     <td>
-                      <h3>Stuff I learned</h3>
-                      <p>1. It takes A LOT of consistent training data to train a ML Model accurately.<br></br>2. Building any type of accurate internet aggregator that we use as commonly as Indeed.com, for example, is extremely complex.</p>
+                      <h3>Stuff I'm learning</h3><p>Check back with me in a few months... I just started!</p>
                     </td>
                   </tr>
                 </table>
@@ -85,46 +84,58 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1" active={accordion2Open ? 'true' : 'false'}>
+      <Accordion.Item eventKey="2" active={accordion2Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
             <Button variant="link" className="button" onClick={toggleAccordion2}>
-              Designing robots with Kevares 🦾
+              TicketMaster Product Pitch 🏟️
             </Button>
             {accordion2Open && (
               <div>
                 <table>
                   <tr>
-                    <td style={{ width: '32%' }}>
-                      <p>In the summer after first-year, I worked with a cool startup called <span style={{ fontWeight: 'bold', color: 'orange' }}>Kevares Autonomous Services</span>. They make robots that autonomize municipal processes like <span style={{ fontWeight: 'bold', color: 'orange' }}>side-walk inspections, snow removal, and grass-cutting</span>. I worked with the Embedded Systems team to redesign the second version of their flagship side-walk inspection robot. </p>
+                    <td style={{ width: '35%' }}>
+                      <p>Selected as a fellow in <span style={{ fontWeight: 'bold', color: '#024DDF' }}>Ivey Product Society's 4th annual Product Fellowship</span>. Spent a few months <span style={{ fontWeight: 'bold', color: '#024DDF' }}>ideating and prototyping</span> a solution to increase user confidence when purchasing tickets on <span style={{ fontWeight: 'bold', color: '#024DDF' }}>TicketMaster</span> and pitched it to industry PMs. The pitch deck is below, let me know what you think. Here's the <a href="https://docs.google.com/document/d/16nfTyq_ylCgwl2tjIhWhfhtrkkhoqib9dJPF80uFFrw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">PRD</a>.</p>
+
+
                     </td>
                     <td style={{ width: '4%' }}></td>
                     <td>
                       <h3>Stuff I learned</h3>
-                      <p>1. Learning engineering concepts while considering the cross-functional team’s priorities with the robot such as sales and design with the chassis was a difficult but rewarding task.<br></br>2. We were able to increase the width of view of the robot so that it wouldn’t have to do multiple rounds to capture one wide sidewalk while decreasing its footprint, which sounds a lot easier than it is!
-                        <br></br>3. CAD, Managing a product and communicating with the many teams involved.</p>
+                      <p>1. Doing structured user interviews to find pain points<br></br>2. Understanding launch strategies and exit criteria for beta tests<br></br>3. Acknowledging both the business case for the company and the value added for the user</p>
                     </td>
                   </tr>
                 </table>
+                <iframe
+                  src="src/assets/TicketMaster.pdf"
+                  width="1000px"
+                  height="621px"
+                  allow="autoplay"
+                  frameborder="0"
+                  style={{ border: 'none', display: 'block', margin: '0 auto' }}
+                  allowfullscreen="true"
+                  mozallowfullscreen="true"
+                  webkitallowfullscreen="true"
+                ></iframe>
               </div>
             )}
           </div>
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2" active={accordion3Open ? 'true' : 'false'}>
+      <Accordion.Item eventKey="4" active={accordion4Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
-            <Button variant="link" className="button" onClick={toggleAccordion3}>
-              How I get unreleased music on Spotify 🙀
+            <Button variant="link" className="button" onClick={toggleAccordion4}>
+              How I can get any song on Spotify 🙀
             </Button>
-            {accordion3Open && (
+            {accordion4Open && (
               <div>
                 <table>
                   <tr>
-                    <td style={{ width: '32%' }}>
-                      <p>Web application made using <span style={{ fontWeight: 'bold', color: 'green' }}>Flask</span> and <span style={{ fontWeight: 'bold', color: 'green' }}>Python</span> that streamlines the process of converting YouTube audio tracks into custom Spotify tracks. Security certificate from <span style={{ fontWeight: 'bold', color: 'green' }}>ZeroSSL</span>. Hosted using <span style={{ fontWeight: 'bold', color: 'green' }}>GoDaddy</span> and <span style={{ fontWeight: 'bold', color: 'green' }}>PythonAnywhere</span>. Check it out at  <a href="https://www.localify.online" target="_blank" rel="noopener noreferrer">
-                        www.localify.online
+                    <td style={{ width: '35%' }}>
+                      <p>Web application made using <span style={{ fontWeight: 'bold', color: 'green' }}>Flask</span> and <span style={{ fontWeight: 'bold', color: 'green' }}>Python</span> that streamlines the process of converting YouTube audio tracks into custom Spotify tracks. Security certificate from <span style={{ fontWeight: 'bold', color: 'green' }}>ZeroSSL</span>. Hosted using <span style={{ fontWeight: 'bold', color: 'green' }}>GoDaddy</span> and <span style={{ fontWeight: 'bold', color: 'green' }}>PythonAnywhere</span>. Check it out at  <a href="https://www.localify.live" target="_blank" rel="noopener noreferrer">
+                        www.localify.live
                       </a>.</p>
                     </td>
                     <td style={{ width: '4%' }}></td>
@@ -153,74 +164,29 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="3" active={accordion4Open}>
+      <Accordion.Item eventKey="3" active={accordion3Open ? 'true' : 'false'}>
         <Accordion.Body>
           <div>
-            <Button className="button" variant="link" onClick={toggleAccordion4}>
-              Western Student Hub 👾
+            <Button variant="link" className="button" onClick={toggleAccordion3}>
+              Helping Canadians find jobs 🤝
             </Button>
-            {accordion4Open && (
+            {accordion3Open && (
               <div>
                 <table>
                   <tr>
-                    <td style={{ width: '28%' }}>
+                    <td style={{ width: '35%' }}>
                       <p>
-                        Collaborative web application made using
-                        <span style={{ fontWeight: 'bold', color: 'green' }}> React</span> and
-                        <span style={{ fontWeight: 'bold', color: 'green' }}> MongoDB</span>.
-                        Allows for students to upload a syllabus and have a summarized view of all important dates, assignments, and exams using a file scraper. My contribution was mainly focused on the syllabus upload page.
+                        I also had the opportunity to work at <span style={{ fontWeight: 'bold', color: '#6495ed' }}>ImmiCan</span>, a social enterprise dedicated to helping immigrants secure suitable employment. In my role as a <span style={{ fontWeight: 'bold', color: '#6495ed' }}>Product Manager</span>, I focused on developing the <span style={{ fontWeight: 'bold', color: '#6495ed' }}>ImmiAI chatbot</span>. This role significantly enhanced my understanding of <span style={{ fontWeight: 'bold', color: '#6495ed' }}>prioritization</span> through direct user interviews, which provided deep insights into user needs and product development. Also worked on prompt engineering and designing systems to help understand my engineers a little better!
                       </p>
-                    </td>
-                    <td style={{ width: '4%' }}></td>
-                    <td>
-                      <h3>Stuff I learned</h3>
-                      <p>1. ReactJS (wow that was a tough learning curve)<br></br>2. API Calls from the frontend and requesting information from the backend<br></br>3. BootStrapping for easy CSS<br></br>4. GitHub. Pretty much everything from push, pull, and more advanced stuff like pull requests.<br></br><span style={{ fontWeight: 'bold' }}>5. Editing code as a large team is very meticulous and you have to be constantly communicating so that you don't overwrite someone else's code 😬</span></p>
-                    </td>
-                  </tr>
-                </table>
-                <h3>
-                  Check it out <a href="https://github.com/Breaking-Binary/WebApp" target="_blank" rel="noopener noreferrer">here</a>.
-                </h3>
-              </div>
-            )}
 
-          </div>
-          <br></br>
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="4" active={accordion5Open}>
-        <Accordion.Body>
-          <div>
-            <Button className="button" variant="link" onClick={toggleAccordion5}>
-              My personal website 🌎
-            </Button>
-            {accordion5Open && (
-              <div>
-                <table>
-                  <tr>
-                    <td style={{ width: '28%' }}>
-                      <p>The thing you are viewing right now.</p>
-                      <p>
-                        Made using
-                        <span style={{ fontWeight: 'bold', color: 'green' }}> React</span> and
-                        <span style={{ fontWeight: 'bold', color: 'green' }}> Spotify API</span>.
-                        Bootstrapped with
-                        <span style={{ fontWeight: 'bold', color: 'green' }}> Netlify </span>
-                        and hosted on
-                        <span style={{ fontWeight: 'bold', color: 'green' }}> GitHub Pages</span>.
-                        Special shoutout to ChatGPT for being the best troubleshooter in the world.
-                      </p>
                     </td>
                     <td style={{ width: '4%' }}></td>
                     <td>
                       <h3>Stuff I learned</h3>
-                      <p>1. Customizing Bootstrap components<br></br>2. Integrating Spotify API into a live website<br></br>3. The design process for creating a front-end application (something that is pretty new to me since I'm not the most creative person)<br></br>4. Hosting a website on GitHub pages</p>
+                      <p>1. The importance of understanding the actual product before doing anything else<br></br>2. Understanding how to structure user interviews without being too narrowminded with your questions<br></br><span style={{ fontWeight: 'bold' }}>3. Internal communication is key, admitting you really don’t know much and others are there to help you figure it out!</span></p>
                     </td>
                   </tr>
                 </table>
-                <h3>
-                  Check it out <a href="https://github.com/shubhhpatel/" target="_blank" rel="noopener noreferrer">here</a>.
-                </h3>
               </div>
             )}
           </div>
@@ -228,7 +194,34 @@ function AlwaysOpenExample() {
         </Accordion.Body>
       </Accordion.Item>
       <h2>Stuff I've done in the past</h2>
-      <Accordion.Item eventKey="5" active={accordion6Open}>
+      <Accordion.Item eventKey="5" active={accordion5Open ? 'true' : 'false'}>
+        <Accordion.Body>
+          <div>
+            <Button variant="link" className="button" onClick={toggleAccordion5}>
+              Designing robots with Kevares 🦾
+            </Button>
+            {accordion5Open && (
+              <div>
+                <table>
+                  <tr>
+                    <td style={{ width: '35%' }}>
+                      <p>In the summer after first-year, I worked with a cool startup called <span style={{ fontWeight: 'bold', color: 'orange' }}>Kevares Autonomous Services</span>. They make robots that autonomize municipal processes like <span style={{ fontWeight: 'bold', color: 'orange' }}>side-walk inspections, snow removal, and grass-cutting</span>. I worked with the Embedded Systems team to redesign the second version of their flagship side-walk inspection robot. </p>
+                    </td>
+                    <td style={{ width: '4%' }}></td>
+                    <td>
+                      <h3>Stuff I learned</h3>
+                      <p>1. Learning engineering concepts while considering the cross-functional team’s priorities with the robot such as sales and design with the chassis was a difficult but rewarding task.<br></br>2. We were able to increase the width of view of the robot so that it wouldn’t have to do multiple rounds to capture one wide sidewalk while decreasing its footprint, which sounds a lot easier than it is!
+                        <br></br>3. CAD, Managing a product and communicating with the many teams involved.</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            )}
+          </div>
+          <br></br>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="6" active={accordion6Open}>
         <Accordion.Body>
           <div>
             <Button className="button" variant="link" onClick={toggleAccordion6}>
@@ -238,7 +231,7 @@ function AlwaysOpenExample() {
               <div>
                 <table>
                   <tr>
-                    <td style={{ width: '30%' }}>
+                    <td style={{ width: '35%' }}>
                       <p>
                         As part of the <strong style={{ color: 'RGB(88, 44, 131' }}>Projects Team on WSE</strong>, I worked with six other team members (one is missing from the picture) to fully plan, develop and deploy a full-stack application using <strong style={{ color: 'RGB(88, 44, 131' }}>React and MongoDB</strong>. I learned a lot throughout the year and I can definitely say it took me from being a <strong style={{ color: 'RGB(88, 44, 131' }}>wannabe-coder to a semi-legit coder</strong> 😎.
                       </p>
@@ -257,7 +250,7 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="6" active={accordion7Open}>
+      <Accordion.Item eventKey="7" active={accordion7Open}>
         <Accordion.Body>
           <div>
             <Button className="button" variant="link" onClick={toggleAccordion7}>
@@ -267,7 +260,7 @@ function AlwaysOpenExample() {
               <div>
                 <table>
                   <tr>
-                    <td style={{ width: '30%' }}>
+                    <td style={{ width: '35%' }}>
                       <p>
                         <strong style={{ color: 'orange' }}>Hoodies for Hope</strong> is a business started as part of the <strong style={{ color: 'orange' }}>Junior Achievement Company Program</strong>. I decided to pitch a business that sells apparel with designs created by an Indigenous artist and colored by Indigenous children.
                         Profits from the business would go towards supporting a yearly trip for a fly-in reserve in Western Canada.
@@ -290,7 +283,7 @@ function AlwaysOpenExample() {
           <br></br>
         </Accordion.Body>
       </Accordion.Item>
-    </Accordion>
+    </Accordion >
 
   );
 }
@@ -308,21 +301,19 @@ function App() {
 
   const dynamicWords = [
     'film photography',
-    'concerts',
-    'stoic philosophy',
-    'film cameras',
     'underground hip-hop',
+    'concert photography',
+    'stoic philosophy',
+    'digital cameras',
     'seinfeld',
     'procrastinating',
     'toronto r&b',
     'breaking bad',
-    'concert photography',
+    'concerts',
     'bedroom pop',
     'thrifting',
     'sitcoms',
     'startups',
-    'greek mythology',
-    'concerts',
     'building products',
     'the raptors',
     'nostalgia',
@@ -357,30 +348,29 @@ function App() {
                 <SyntaxHighlighter language="js" style={materialDark}>
                   {`function getShubhBiography() {
   return {
-    university: "Western University",
-    program: "Computer Science",
-    year: 2,
+    university: [
+      "Western University", 
+      "Ivey Business School" 
+    ],
+    program: [
+      "Computer Science",
+      "Business"
+    ],
+    year: 3,
     experience: {
+      Trolley: "Product Intern",
+      Ivey_Product_Society: "Product Fellow",
       ImmiCan_AI: "Product Management Intern",
-      Arima: "Data Analyst Intern"
-      Comparastore: "Data Analyst Intern",
-      Kevares: "Embedded Systems Intern",
-      Western_AI: "Project Manager",
-      Western_Software_Engineering: "Full-Stack Developer",
+      Kevares: "Embedded Systems Intern"
     },
     careerInterests: [
       "Product Management",
+      "Concert Photography",
       null // uh, i'm still figuring it out
     ],
-    otherInterests: [
-      "Big Data",
-      "Machine Learning",
-      "Blockchain",
-      "Artificial Intelligence",
-      "Quantum Communication"
-    ],
-    doYouGetTheReference: true
-    lastUpdated: "January 20, 2024"
+    funFact: [
+      "Has been to 16 concerts"
+    ]
   };
 }
 `}
@@ -534,7 +524,7 @@ function App() {
           transition={{ duration: 1 }}
         >
           <h2>And yea... that's pretty much it, thanks for stopping by!</h2>
-          <h4><i>P.S... I'm open to opportunities for Summer 2024 so contact me and we can talk!</i></h4>
+          <h4><i>P.S... I'm open to opportunities for Summer 2025 so contact me and we can talk!</i></h4>
         </motion.div>
       </motion.div >
     </div >
