@@ -107,7 +107,7 @@ function AlwaysOpenExample() {
                   </tr>
                 </table>
                 <iframe
-                  src="https://shubh.online/src/assets/TicketMaster.pdf"
+                  src="public/TicketMaster.pdf"
                   width="1000px"
                   height="621px"
                   allow="autoplay"
